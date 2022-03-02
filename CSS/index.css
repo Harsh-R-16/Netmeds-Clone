@@ -1,0 +1,248 @@
+body {
+  background-color: #f3f7fb;
+}
+/* -------------------------------------------- */
+#img-slider {
+  position: relative;
+  height: 320px;
+  padding: 10px 10px 20px;
+}
+#img-slider i {
+  position: absolute;
+  top: 47%;
+  color: #fff;
+  font-size: 25px;
+}
+#img-slider img {
+  height: 100%;
+  width: 100%;
+}
+#img-slider i:nth-of-type(2) {
+  right: 10px;
+}
+/* -------------------------------------------- */
+
+#discount {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+}
+#discount > div {
+  width: 32%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  background-color: #fff;
+  border-radius: 6px;
+}
+#discount img {
+  float: left;
+  margin: 13px 20px 13px 16px;
+  height: 60px;
+}
+#discount i {
+  position: absolute;
+  right: 13px;
+}
+
+/* -------------------------------------------- */
+
+h2 {
+  font-size: 26px;
+  margin: 18px 15px 12px;
+}
+h2 span {
+  float: right;
+  color: #ef4281;
+  font-size: 14px;
+  margin: 7px 0px;
+}
+/* -------------------------------------------- */
+#payment {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#payment > div {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+#payment img {
+  height: 50px;
+}
+#payment p {
+  font-size: 12px;
+  line-height: 17px;
+}
+#payment div p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+#payment img + p {
+  margin: 8px;
+  font-size: 25px;
+  color: rgb(189, 189, 189);
+}
+
+/* -------------------------------------------- */
+
+#previous {
+  padding: 20px 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+#previous div {
+  background-color: #f3f7fb;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  border-radius: 15px;
+}
+#previous p {
+  margin: 7px 0px 15px 15px;
+}
+#previous p + p {
+  color: #24aeb1;
+  font-size: 20px;
+}
+#previous p i {
+  background-color: #24aeb1;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  padding: 4px 9px;
+}
+#previous img {
+  float: right;
+}
+
+/* -------------------------------------------- */
+
+#trending {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+#trending img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* -------------------------------------------- */
+
+.sectionType1 {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+.sectionType1 div {
+  background-color: #fff;
+  padding-bottom: 25px;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  border-radius: 5px;
+}
+.sectionType1 img {
+  width: 80%;
+  margin: 10px 10%;
+}
+.sectionType1 p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* -------------------------------------------- */
+
+.sectionType2 {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+.sectionType2 div {
+  background-color: #fff;
+  padding-bottom: 25px;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  border-radius: 5px;
+}
+.sectionType2 p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.sectionType2 p:nth-of-type(2) {
+  color: green;
+  margin-top: 16px;
+}
+/* -------------------------------------------- */
+.sectionType3 {
+  margin-top: 15px;
+  padding: 5px 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sectionType3 p:nth-of-type(1) {
+  color: #24aeb1;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.sectionType3 p {
+  margin: 5px;
+}
+#star {
+  color: #ef4281 !important;
+}
+.sectionType3 button {
+  background-color: #24aeb1;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 3px 3px 6px 1px #398578;
+}
+.sectionType3 img {
+  margin-top: 15px;
+}
+/* -------------------------------------------- */
+#beautyE {
+  background-color: #ef4281;
+  padding: 10px 0px 15px;
+  margin: 10px 0px 20px;
+}
+#beautyB {
+  background-color: #8a9095;
+  padding: 10px 0px 15px;
+  margin: 10px 0px;
+}
+#beautyE h2,
+#beautyB h2 {
+  color: #fff;
+}
+/* -------------------------------------------- */
+#text {
+  padding: 15px 25px;
+}
+#text span {
+  font-weight: bold;
+}
+#text p {
+  margin: 10px 0px;
+}
+#text h4 {
+  font-size: 16px;
+}
+#text ul {
+  margin: 10px 40px;
+}
