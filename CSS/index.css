@@ -52,6 +52,9 @@ body {
 #discount h2 {
   margin: 10px 15px;
 }
+#discount h2 + p {
+  color: green;
+}
 /* -------------------------------------------- */
 
 h2 {

@@ -5,13 +5,14 @@ main {
   letter-spacing: 1.2px;
   text-align: center;
 }
-h1 {
+main h1 {
   background-color: #333333;
   color: #ffffff;
   width: fit-content;
   margin: 10px auto 22px;
   padding: 10px 20px;
   font-size: 30px;
+  border-radius: 5px;
 }
 iframe {
   width: 55%;
@@ -64,4 +65,9 @@ h3 > span {
 
 main section div:nth-of-type(2n + 1) {
   border-right: 3px dotted rgb(90, 88, 88);
+}
+
+.covidDiv h3 {
+  font-size: 16px;
+  line-height: 24px;
 }

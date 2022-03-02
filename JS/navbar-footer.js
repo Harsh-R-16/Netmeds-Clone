@@ -1,6 +1,6 @@
 let navbar = document.querySelector("nav");
 navbar.innerHTML = `<section id="top">
-            <img src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg" alt="">
+            <a href="index.html"><img src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg" alt=""></a>
             <div>
                 <p>Deliver to <span id="zipCode">110002</span><i class='fa fa-chevron-down'></i></p>
                 <p id="line">|</p>
@@ -46,8 +46,8 @@ navbar.innerHTML = `<section id="top">
                         src="https://th.bing.com/th/id/OIP.94Is_rsEu77WRdiYoDFGEQHaHa?w=167&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
                         alt=""></span>
                 Health Corner <i class='fa fa-caret-down'></i>
-                <span class="drop display">- Health Library<br>
-            - Corona Awaerness<br>- Patients Alike</span>
+                <span class="drop display"><a href="./covid.html">- Health Library</a><br>
+            <a href="./covid.html">- Corona Awaerness</a><br><a href="./covid.html">- Patients Alike</a></span>
             </p>
 
         </section>
