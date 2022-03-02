@@ -1,0 +1,127 @@
+body {
+  background-color: #f3f3f3;
+  font-family: "Ubuntu", sans-serif;
+}
+h2 {
+  font-size: 26px;
+  margin: 18px 15px 12px;
+}
+h2 span {
+  float: right;
+  color: #ef4281;
+  font-size: 14px;
+  margin: 7px 0px;
+}
+/* -------------------------------------- */
+.sectionType1 {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+.sectionType1 div {
+  background-color: #fff;
+  padding-bottom: 25px;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  border-radius: 5px;
+}
+.sectionType1 img {
+  width: 80%;
+  margin: 10px 10%;
+}
+.sectionType1 p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* -------------------------------------- */
+.sectionType2 {
+  padding: 15px;
+  margin: 10px 15px 20px;
+  background-color: #fff;
+  letter-spacing: 1.5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+}
+.sectionType2 > p:nth-of-type(1) {
+  color: rgb(88, 88, 88);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.sectionType2 h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.sectionType2 h3 + p {
+  color: rgb(88, 88, 88);
+}
+.sectionType2 section {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.sectionType2 section div {
+  position: relative;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  padding: 10px 12px 17px;
+  border-radius: inherit;
+  margin: 10px 0;
+}
+.sectionType2 img {
+  width: 70%;
+  margin: 5px 15% 10px;
+}
+.sectionType2 h4 {
+  font-size: 15px;
+  line-height: 20px;
+}
+.mkt {
+  color: rgb(88, 88, 88);
+  margin: 7px 0px;
+}
+.bestPrice {
+  font-weight: bold;
+  font-size: 15px;
+}
+.bestPrice span {
+  color: #ef4281;
+}
+.mrp {
+  margin: 7px 0px 10px;
+  font-size: 14px;
+}
+.sectionType2 button {
+  width: 100%;
+  font-size: 17px;
+  padding: 7px;
+  border-radius: inherit;
+  color: white;
+  background-color: rgb(50, 174, 177);
+  border: none;
+}
+/* -------------------------------------- */
+.discount-price {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 11px;
+  background-color: #84be52;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+h3 span {
+  float: right;
+  color: #ef4281;
+  font-size: 14px;
+  margin: 7px 0px;
+  cursor: pointer;
+}
+.toggle {
+  height: 390px;
+  overflow: hidden;
+}

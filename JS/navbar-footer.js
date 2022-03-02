@@ -22,7 +22,7 @@ navbar.innerHTML = `<section id="top">
                 <span><img
                         src="https://th.bing.com/th/id/OIP.94Is_rsEu77WRdiYoDFGEQHaHa?w=167&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
                         alt=""></span>
-                Wellness
+                <a href="wellness.html">Wellness</a>
             </p>
             <p>
                 <span><img
