@@ -12,20 +12,23 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   padding: 20px 40px;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: inherit;
   z-index: 1;
+  width: 100%;
 }
 #top div {
   display: flex;
-  /* justify-content: cente; */
   align-items: center;
   background-color: #f3f3f3;
   padding: 10px 15px;
   border-radius: 5px;
   width: 44%;
+}
+#top div p {
+  font-size: 14px;
+  font-weight: bold;
 }
 #top > p {
   color: #f3f3f3;
@@ -43,8 +46,9 @@ nav {
 }
 #line {
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 21px !important;
   color: #b3afaf;
+  font-weight: normal !important;
 }
 #zipCode {
   color: rgb(50, 174, 177);
@@ -56,7 +60,9 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   padding: 3px 10% 15px;
+  margin-top: 87.2px;
 }
+/* 87.2 */
 #middle p {
   display: flex;
   justify-content: center;
@@ -69,7 +75,7 @@ nav {
   height: 45px;
   aspect-ratio: 1;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 span + i {
@@ -86,6 +92,8 @@ span + i {
   color: rgb(37, 37, 37);
   text-decoration: none;
   margin: 14px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
 }
 
 footer {
@@ -148,6 +156,12 @@ footer button {
   background-color: #000;
   border: none;
   cursor: pointer;
+}
+footer hr {
+  width: 94%;
+  margin: 0px auto;
+  border: none;
+  border-top: 1px solid rgb(202, 201, 201);
 }
 button i {
   font-size: 30px;

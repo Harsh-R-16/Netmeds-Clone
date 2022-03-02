@@ -72,6 +72,7 @@ footer.innerHTML = `<section>
                 pharmacies, with
                 over 100 years’ experience in dispensing quality medicines.</p>
         </section>
+        <hr>
         <section>
             <div>
                 <p>COMPANY</p>
@@ -127,6 +128,7 @@ footer.innerHTML = `<section>
                 </button>
             </div>
         </section>
+        <hr>
         <section>
             <a>Medicine</a>
             <a>Wellness</a>
