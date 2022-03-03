@@ -1,0 +1,130 @@
+#products {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  padding: 15px;
+  gap: 5px;
+  background-color: #f3f3f3;
+}
+#products section {
+  height: 1500px;
+}
+#products aside {
+  height: 1500px;
+}
+summary {
+  list-style: none;
+}
+/* ======================================= */
+aside article {
+  padding: 15px;
+  height: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 85%;
+  overflow-y: scroll;
+  box-shadow: 3px 3px 6px 3px #acacac;
+  background-color: #fff;
+}
+aside article:nth-of-type(2) {
+  height: 700px;
+}
+aside h2 {
+  margin: 12px 3px 15px;
+}
+details {
+  margin: 10px;
+  cursor: pointer;
+}
+details i {
+  margin-right: 8px;
+}
+details li,
+#checkboxes li {
+  list-style: none;
+  margin: 10px 0px 10px 16px;
+  color: #555;
+  font-size: 14px;
+}
+
+*/
+/* ======================================= */
+input[type="checkbox"] {
+  margin-right: 3px;
+}
+/* ======================================= */
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* --------------------------------- */
+#container h2 {
+  text-align: center;
+  padding: 35px 20px;
+  background-color: #e0f8ff;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+#shopByCategory {
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 18px;
+}
+#shopByCategory div {
+  border-radius: 6px;
+  width: 130px;
+  border: 1px solid rgb(211, 211, 211);
+  overflow: hidden;
+}
+#shopByCategory img {
+  width: 100%;
+}
+#shopByCategory p {
+  font-size: 11px;
+  margin: 5px;
+  text-align: center;
+}
+#shopByCategory p:nth-of-type(2) {
+  color: rgb(50, 174, 177);
+  font-weight: bold;
+}
+#sorting {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sorting button {
+  background-color: white;
+  color: rgb(50, 174, 177);
+  border: 1px solid rgb(50, 174, 177);
+  font-size: 12px;
+  padding: 4px 10px;
+  margin: 4px 10px;
+  border-radius: 4px;
+}
+
+#middle {
+  margin-top: 68px;
+  padding-bottom: 15px;
+}
