@@ -1,0 +1,77 @@
+#grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 40px;
+  background-color: #e0f8ff;
+  gap: 15px;
+  letter-spacing: 1px;
+}
+#grid img {
+  width: 100%;
+}
+#grid div:nth-of-type(2) {
+  padding: 20px 40px 20px 20px;
+  background-color: #fff;
+  justify-content: space-between;
+}
+#grid button {
+  width: 40%;
+}
+#grid p {
+  font-size: 13px;
+  font-weight: normal;
+  margin: 15px 0px;
+}
+#grid label {
+  color: rgb(50, 174, 177);
+  font-size: 16px;
+  font-weight: bold;
+}
+#grid input,
+#grid select {
+  margin: 10px 0 20px;
+}
+#grid input[type="text"],
+#grid input[type="number"] {
+  border: none;
+  padding: 5px 7px;
+  width: 100%;
+  border-bottom: 1px solid #dfdfdf;
+}
+#grid input:focus {
+  outline: none;
+}
+
+#grid select {
+  width: 100%;
+  padding: 7px;
+  background-color: #f7f7f7;
+  border: none;
+}
+#grid button {
+  border: none;
+  border-radius: 5px;
+  width: 42%;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+}
+#grid button i {
+  font-size: 17px;
+  margin-right: 10px;
+  color: rgb(50, 174, 177);
+}
+#grid option {
+  font-size: 15px;
+}
+#grid label + button {
+  width: 50%;
+  text-align: center;
+  margin: 10px 25%;
+  color: white;
+  background-color: rgb(50, 174, 177);
+  font-size: 16px;
+}
