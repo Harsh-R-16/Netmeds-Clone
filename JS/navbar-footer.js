@@ -1,4 +1,11 @@
 let navbar = document.querySelector("nav");
+let n;
+let link;
+localStorage.getItem("name") ? (link = "order.html") : (link = "login.html");
+// console.log(localStorage.getItem("namel"));
+localStorage.getItem("name")
+  ? (n = localStorage.getItem("name") + " " + localStorage.getItem("lname"))
+  : (n = "Sign in / Sign up");
 navbar.innerHTML = `<section id="top">
             <a href="index.html"><img src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg" alt=""></a>
             <div>
@@ -7,8 +14,8 @@ navbar.innerHTML = `<section id="top">
                 <input type="text" placeholder="Search for medicine & wellness products...">
             </div>
             <p><i class="fa fa-upload"></i> Upload</p>
-            <p><i class='fa fa-shopping-cart'></i> Cart</p>
-            <p><i class='fas fa-user-edit'></i> Sign in / Sign up</p>
+            <p><a href=${link}><i class='fa fa-shopping-cart'></i> Cart</a></p>
+            <p><a href="login.html"><i class='fas fa-user-edit'></i> ${n}</a></p>
         </section>
         <section id="middle">
             <p class="drop-p">
