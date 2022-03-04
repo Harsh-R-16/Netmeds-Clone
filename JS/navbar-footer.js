@@ -8,7 +8,7 @@ navbar.innerHTML = `<section id="top">
             </div>
             <p><i class="fa fa-upload"></i> Upload</p>
             <p><i class='fa fa-shopping-cart'></i> Cart</p>
-            <p><i class='fas fa-user-edit'></i> Sign in / Sign up</p>
+            <p><i class='fas fa-user-edit'></i> <a href="login.html">Sign in / Sign up<a></p>
         </section>
         <section id="middle">
             <p class="drop-p">
@@ -52,7 +52,7 @@ navbar.innerHTML = `<section id="top">
 
         </section>
         <section id="bottom">
-            <a href="#">COVID Essentials</a>
+            <a href="covidEssentials.html">COVID Essentials</a>
             <a href="#">Diabetes</a>
             <a href="#">Eyewear</a>
             <a href="#">Ayush</a>

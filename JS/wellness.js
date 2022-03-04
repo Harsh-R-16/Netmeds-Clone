@@ -557,6 +557,7 @@ let data = [
   },
 ];
 
+
 let article = document.querySelector("article");
 for (let i = 0; i < data.length; i++) {
   let res = "";
@@ -595,3 +596,4 @@ spans.forEach((span) => {
     sec.querySelector("section").classList.toggle("toggle");
   });
 });
+
