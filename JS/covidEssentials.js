@@ -1,271 +1,223 @@
-// let list = document.querySelector(".menu");
+let h2 = document.querySelector("#container h2");
+// h2.innerHTML = "k";
+if (localStorage.getItem("url")) {
+  h2.innerHTML = localStorage.getItem("url");
+  document.title = localStorage.getItem("url");
+}
+data.sort(() => Math.random() - 0.5);
+let summary = document.querySelector("#summary");
+let checkboxes = document.querySelector("#checkboxes");
+let summaryCategory = {
+  Ayush: ["Homeopathy", "Ayurvedic", "Unani", "Siddha"],
+  Fitness: [
+    "Vitamins And Supplements",
+    "Family Nutrition",
+    "Health Food And Drinks",
+    "Ayurvedic Supplements",
+    "Sports Supplements",
+    "Smoking Cessation Support",
+    "Weight Management",
+  ],
+  "Mom & Baby": [
+    "Baby Care",
+    "Feminine Hygiene",
+    "Maternity Care",
+    "Toys & Games",
+    "Baby Bath Time",
+    "Maternity Accessories",
+  ],
+  "Sexual Wellness": [
+    "Lubricants",
+    "Massagers/Vibrators",
+    "Sprays/Gels",
+    "Vitamins",
+    "Sexual Health Supplements",
+  ],
+  Treatments: [
+    "Feminine Hygiene",
+    "Maternity Care",
+    "Toys & Games",
+    "Baby Bath Time",
+  ],
+  Devices: ["Family Nutrition"],
+  "Health Conditions": ["Health Food And Drinks"],
+  "Otc Deals": [
+    "Feminine Hygiene",
+    "Maternity Care",
+    "Toys & Games",
+    "Baby Bath Time",
+  ],
+  Eyewear: ["Ayurvedic Supplements"],
+  "Covid Essentials": ["Homeopathy", "Ayurvedic", "Unani", "Siddha"],
+  Surgical: [
+    "Feminine Hygiene",
+    "Maternity Care",
+    "Toys & Games",
+    "Baby Bath Time",
+  ],
+  "Diabets Support": ["Sports Supplements"],
+  Frangrances: [
+    "Feminine Hygiene",
+    "Maternity Care",
+    "Toys & Games",
+    "Baby Bath Time",
+  ],
+  "Make-Up": ["Homeopathy", "Ayurvedic", "Unani", "Siddha"],
+  Hair: ["Maternity Care", "Toys & Games", "Baby Bath Time"],
+  "Men's Grooming": [
+    "Feminine Hygiene",
+    "Maternity Care",
+    "Toys & Games",
+    "Baby Bath Time",
+  ],
+  "Skin Care": ["Smoking Cessation Support"],
+  "Tools & Wellness": ["Weight Management"],
+  Wellness: [
+    "Feminine Hygiene",
+    "Maternity Care",
+    "Toys & Games",
+    "Baby Bath Time",
+  ],
+  "Personal Care": ["Homeopathy", "Ayurvedic", "Unani", "Siddha"],
+};
 
-// let data1 = ["Ayush", "Fitness", "Mom & Baby", "Sexual Wellness", "Treatments", "Devices", "Health Conditions", "Otc Deals", "Eyewear", 
-// "Covid Essentials", "Surgical ", "Diabetes Support", "Fragrances ", "Make-Up", "Hair", 
-// "Men's Grooming", "Skin Care", "Tools & Appliances", "Wellness", "Personal Care"]
+let checkData = {
+  Availability: ["Exclude out of stock (389)"],
+  Categories: [
+    "Mask (308)",
+    " Personal & Home Essentials (154)",
+    " Business Essentials (146)",
+    " Immunity Booster (51)",
+    " Travel Essentials (13)",
+  ],
+  Manufacturers: [
+    " Immunity Booster (51)",
+    "Boldfit (28)",
+    "Faballey (28)",
+    "Mask (308)",
+    "Dettol (24)",
+    "Pinkblue (24)",
+    " Travel Essentials (13)",
+  ],
+  Brands: [
+    "1Mile (51)",
+    "Advind Healthcare (44)",
+    "Care View (31)",
+    "Livinguard (31)",
+    "Boldfit (28)",
+    "Faballey (28)",
+    "Dettol (24)",
+    "Pinkblue (24)",
+    "Orchidsplus (14)",
+    "Resist+ (14)",
+  ],
+};
 
-// data1.forEach((item) => {
-//     let li = document.createElement("li");
-//     li.innerHTML = item;
+for (let item in summaryCategory) {
+  summary.innerHTML += `<details>
+                <summary><i class='fa fa-angle-right'></i>${item}</summary>
+                ${getSummary(summaryCategory[item])}
+                </details>`;
+}
 
-//     list.appendChild(li);
-// });
+function getSummary(arr) {
+  let res = "";
+  for (let i = 0; i < arr.length; i++) {
+    res += `<li>${arr[i]}</li>`;
+  }
+  return res;
+}
 
+for (let item in checkData) {
+  checkboxes.innerHTML += `
+  <h3>${item}</h3>
+  ${getCheck(checkData[item])}
+    `;
+}
 
-// let list2 = document.querySelector(".Categories_list")
+function getCheck(arr) {
+  let res = "";
+  for (let i = 0; i < arr.length; i++) {
+    res += `<li>
+    <input type="checkbox" id=${arr[i]}> <label for=${arr[i]}>${arr[i]}</label>
+      </li>`;
+  }
+  return res;
+}
 
-// let data2 = ["Mask(308)", "Personal & Home Essentials(154)", "Business Essentials(146)", "Immunity Booster(52)", "Travel Essentials(13)"]
+import { data } from "./data.js";
+let allProducts = document.querySelector("#allProducts");
+let cart;
+localStorage.getItem("cart")
+  ? (cart = JSON.parse(localStorage.getItem("cart")))
+  : (cart = []);
 
-// data2.forEach((item) => {
-//     let li2 = document.createElement("li");
-//     li2.innerHTML = "<input type='checkbox'> " + item;
-//     list2.appendChild(li2);
-// })
+function getProducts(index) {
+  let x = index * 16;
+  allProducts.innerHTML = "";
+  for (let i = x; i < x + 16; i++) {
+    let d = Math.round((1 - data[i][3] / data[i][4]) * 100);
 
-// let Manu_list = document.querySelector(".manufacturers_list")
+    allProducts.innerHTML += ` <div>
+                    <img src=${data[i][0]}
+                        alt="">
+                    <h4>${data[i][1]}</h4>
+                    <p class="mkt">Mkt: ${data[i][2]}</p>
+                    <p class="bestPrice">Best Price: <span>Rs. ${
+                      data[i][3]
+                    }</span></p>
+                    <p class="mrp">MRP <span>Rs. ${data[i][4]}</span></p>
+                    <button id=${data[i][5]}>${
+      cart.includes(String(data[i][5])) ? "ADDED" : "ADD"
+    } TO CART</button>
+                    <p class="discount-price">${d}% OFF</p>
+                </div>`;
+  }
+}
+getProducts(0);
 
-// let data3 = [" 1 Mile Healthcare (51)", " Advind Healthcare India Pvt. Ltd. (44)", " Advind Healthcare India Pvt. Ltd. (44)", " Advind Healthcare India Pvt. Ltd. (44)", "Livinguard Technologies Pvt. Ltd. (31)",
-// "Boldfit (28)", "Orient Exports Private Limited (28)","Reckitt Benckiser India Ltd (19)",
-// "West Coast Pharmaceuticals Works Ltd (16)","Axio Biosolutions Pvt.Ltd. (14)","Requity Applied Sciences Pvt Ltd (14)","Reliance Retail Limited (12)",
-// "Itc India Ltd (11)","Redroom Technology Private Limited (11)","Rising Sun Enterprise (11)","San Nap Healthcare (11)",
-// "Sahyog Wellness (10)","CRESCENZIA TRADETECH PVT LTD. (9)","Inlife Pharma Private Limited (9)",
-// "Medipride (9)","Medisales India Pvt Ltd (9)","Romsons Scientific & Surgical Pvt Ltd (9)",
-// "Antrix Health Care Pvt. Ltd. (8)","Chinar Forge Ltd. (8)","ENETSTUDIOZ INC (8)",
-// "Inventz Lifesciences Pvt Ltd (8)","Schulke India Pvt Ltd (8)","Sirona Hygiene Private Limited (8)",
-// "Visionaari LLP (8)", "Cipla Ltd(Otc) (7)",
-// "Piramal Healthcare Ltd (7)", "PASSIM MEDICHEM AGENCIES (6)",
-// "The Mask Lab (6)","Yakhi Retail (6)","Aditya Birla Fashion And Retail Limited (5)",
-// "Ansell India (5)","Eliph Nutrition Pvt Ltd (5)","Microgo LLP (5)",
-// "SFT Technologies Pvt. Ltd. (5)","Sanmed Healthcare Pvt Ltd (5)","Skyra Professional Equipment Pvt. Ltd (5)",
-// "Aeronutrix Sports Products Private Limited (4)","Airwell Enterprises (4)","Dhanvantari Nano Ayushadi (4)",
-// "Dispo Concept Pvt Ltd (4)","GRD Pharmaceuticals (4)","Genus Apparels Limited (4)",
-// "Helyxon Healthcare Solutions Pvt Ltd (4)","Kamadgiri Fashion Ltd. (4)","Kee Healthcare Private Limited (4)","Medichems (4)",
-// ]
+let btns = document.querySelectorAll("#btns button");
+let p = document.querySelector("#showNumber");
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    let num = btns[i].innerHTML - 1;
+    p.innerHTML = `Showing <span>${num * 16 + 1}</span> to <span>${
+      num * 16 + 16
+    }</span> Products`;
+    getProducts(num);
+  });
+}
 
-// data3.forEach((item) => {
-//     let li3 = document.createElement("li");
-//     li3.innerHTML = "<input type='checkbox'>" + item;
-//     Manu_list.appendChild(li3);
-// })
+let sortBtns = document.querySelector("#sortByCategory");
+sortBtns.addEventListener("click", function (e) {
+  if (e.target.innerHTML == "Popularity") {
+    data.sort(() => Math.random() - 0.5);
+  }
+  if (e.target.innerHTML == "High to Low") {
+    data.sort((a, b) => b[3] - a[3]);
+  }
+  if (e.target.innerHTML == "Low to High") {
+    data.sort((a, b) => a[3] - b[3]);
+  }
+  if (e.target.innerHTML == "Discount") {
+    data.sort((a, b) => {
+      let d3 = Math.round((1 - a[3] / b[3]) * 100);
+      let d4 = Math.round((1 - a[4] / b[4]) * 100);
+      return d4 - d3;
+    });
+  }
+  getProducts(0);
+  p.innerHTML = `Showing <span>1</span> to <span>16</span> Products`;
+  console.log(data);
+});
 
-// // brand list 
-
-// let brand_list = document.querySelector(".brandlist");
-
-// let data4 = ["1Mile (51)","Advind Healthcare (44)","Care View (31)","Livinguard (31)","Boldfit (28)",
-//     "Shield Xtra (5)"]
-
-//     data4.forEach((item) => {
-//         let li4 = document.createElement("li");
-//         li4.innerHTML = "<input type='checkbox'>" + item;
-//         brand_list.appendChild(li4);
-//     })
-
-// // arr
-
-// var arr =  [
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/930971/skin_elements_face_pack_turmeric_multani_mitti_100_gm_0_2.jpg",
-//           "Skin Elements Face Pack - Turmeric & Multani.",
-//           "Ayur Herbals",
-//           247,
-//           260,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/959727/hashmi_vetoll_xl_capsule_20s_0_0.jpg",
-//           "Hashmi Vetoll XL Capsule 20's",
-//           "Blossom Kochhar Beauty",
-//           184,
-//           205,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/959708/hashmi_hard_rock_capsule_20s_0_0.jpg",
-//           "Hashmi Multani Rock 20's",
-//           "Nivea India Pvt Ltd",
-//           189,
-//           199,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/924985/skin_elements_mens_intimate_wash_60_ml_0_2.jpg",
-//           "Skin Elements Men's Intimate Wash 60ml",
-//           "Ayur Herbals",
-//           247,
-//           399,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/924992/skin_elements_mens_intimate_wash_120_ml_0_2.jpg",
-//           "Skin Elements Men's Intimate Wash 160ml",
-//           "Blossom Kochhar Beauty",
-//           166,
-//           175,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/927520/prolixr_daily_essentials_bundle_0_0.jpg",
-//           "Prolixr Daily Essentials Bundle",
-//           "Ayur India Pvt",
-//           337,
-//           375,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/927532/prolixr_definite_detox_bundle_0_0.jpg",
-//           "Prolixr Definite Essential Bundle",
-//           "Pt Invent India Pvt",
-//           337,
-//           375,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/835774/accu_chek_instant_test_strips_50_s_0.jpg",
-//           "Accu-check test Strip",
-//           "Patanjali Herbals",
-//           161,
-//           170,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/38061/b_protin_nutritional_powder_supplement_chocolate_500_gm_0.jpg",
-//           "B-Protin Nutritional Powder",
-//           "Blossom Kochhar Beauty",
-//           450,
-//           450,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/853021/ducray_anaphase_anti_hair_loss_complement_shampoo_100_ml_0_3.jpg",
-//           "Ducray Anaphase + Anti-Hair Loss Complement Shampoo",
-//           "Pvt India Pvt",
-//           260,
-//           500,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/14608/nestle_peptamen_peptide_based_diet_powder_vanilla_flavour_400_gm_tin_0_1.jpg",
-//           "Nestle Peptamen  Poweder - Vanilla Flavour 400",
-//           "Ayur Herbals",
-//           247,
-//           260,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/362506/scalpe_plus_anti_dandruff_shampoo_75_ml_0_1.jpg",
-//           "MilkShake Prolixr Powder",
-//           "Blossom Kochhar Beauty",
-//           184,
-//           205,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/413072/ensure_diabetes_care_powder_vanilla_flavour_400_gm_pet_jar_0.jpg",
-//           "MilkShake Prolixr Powder",
-//           "Nivea India Pvt Ltd",
-//           189,
-//           199,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/914676/accu_chek_guide_test_strip_50s_0_1.jpg",
-//           "MilkShake Prolixr Powder",
-//           "Ayur Herbals",
-//           247,
-//           399,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/38061/b_protin_nutritional_powder_supplement_chocolate_500_gm_0.jpg",
-//           "Scalpe Plus Anti Dandruff 75ml",
-//           "Blossom Kochhar Beauty",
-//           166,
-//           175,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/38061/b_protin_nutritional_powder_supplement_chocolate_500_gm_0.jpg",
-//           "Ensure Diabets Care Powder",
-//           "Ayur India Pvt",
-//           337,
-//           375,
-//         ],
-//         [
-//           "https://www.netmeds.com/images/product-v1/150x150/902372/ensure_diabetes_care_powder_vanilla_flavour_1_kg_refill_pack_0_0.jpg",
-//           "Ensure Diabets Care Powder",
-//           "Pt Invent India Pvt",
-//           337,
-//           375,
-//         ],
-// ]
-
-
-// let items = document.querySelector(".shop_by_category");
-
-
-// arr.slice(0,6).forEach( (ele) => {
-//     let items_inShopCategory = document.createElement("div");
-//     let items_img = document.createElement("img");
-//     let random = Math.floor(Math.random()*100);
-
-
-//     let dis = document.createElement("span");
-//     dis.innerHTML = "UPTO " + random + "%";
-//     dis.style.position = "absolute";
-//     dis.style.top="335px";
-//     dis.style.textAlign = "center";
-//     dis.style.color ="green";
-//     dis.style.fontWeight = "bold";
-
-//     let item_name = document.createElement("span");
-//     item_name.textContent = ele[2].slice(0,15) + "..";
-//     item_name.style.position = "absolute";
-//     item_name.style.top = "319px";
-//     item_name.style.overflow ="hidden";
-//     item_name.style.fontWeight = "bold";
-    
-
-//         items_img.src = ele[0];
-//         items_inShopCategory.append(items_img, item_name, dis);
-//         items.append(items_inShopCategory);
-//         console.log(ele[2])
-    
-// });
-
-
-// // show 8 products 
-
-// let products_8 = document.querySelector(".all_products");
-
-// arr.slice(0,8).forEach( (ele) => {
-//     let items_inShopCategory = document.createElement("div");
-//     items_inShopCategory.style.display = "flex";
-//     items_inShopCategory.style.flexDirection = "column";
-//     items_inShopCategory.style.alignItems = "left";
-//     items_inShopCategory.style.padding = "10px";
-
-//     let items_img = document.createElement("img");
-
-
-//     let item_name = document.createElement("h6");
-//     item_name.textContent = ele[1];
-//     item_name.style.fontWeight = "bold";
-
-//     let item_manf = document.createElement("span");
-//     item_manf.textContent = "Mkt:"+ele[2];
-//     item_manf.style.marginTop = "10px";
-    
-//     let price = document.createElement("p");
-//     price.innerHTML = "Best price* <span style='color:red; font-size:18px'> Rs" + ele[3] +".00</span>";
-//     price.fontSize = "20px";
-
-//     let mrp = document.createElement("p");
-//     mrp.innerHTML = "MRP <s>Rs." + ele[4] + ".00 </s>";
-
-//     let addToCart = document.createElement("button");
-//     addToCart.textContent = "ADD TO CART";
-//     addToCart.style.backgroundColor = "#24aeb1";
-//     addToCart.style.color = "white";
-//     addToCart.style.border = "none";
-//     addToCart.style.padding = "10px";
-//     addToCart.style.fontWeight = "bold";
-//     addToCart.style.borderRadius = "2px";
-
-//     let random = Math.floor(Math.random()*100);
-//     let discount_tag = document.createElement("div");
-//     discount_tag.innerHTML = "<span style='color:white; background-color:green; padding:2px; display:flex; width:55px; position: absolute; >"+ random +"% OFF</span>"
-
-//     items_img.src = ele[0];
-//     items_inShopCategory.append(items_img, item_name, item_manf, price, mrp, addToCart, discount_tag);
-//     products_8.append(items_inShopCategory, );
-    
-//     console.log(ele[3])
-// });
-
-
+allProducts.addEventListener("click", function (e) {
+  if (e.target.tagName == "BUTTON") {
+    console.log(e.target.id);
+    if (!cart.includes(e.target.id)) {
+      cart.push(e.target.id);
+      e.target.innerHTML = "ADDED TO CART";
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+});

@@ -52,16 +52,16 @@ navbar.innerHTML = `<section id="top">
 
         </section>
         <section id="bottom">
-            <a href="temp.html">COVID Essentials</a>
-            <a href="temp.html">Diabetes</a>
-            <a href="temp.html">Eyewear</a>
-            <a href="temp.html">Ayush</a>
-            <a href="temp.html">Fitness</a>
-            <a href="temp.html">Mom & Baby</a>
-            <a href="temp.html">Devices</a>
-            <a href="temp.html">Surgicals</a>
-            <a href="temp.html">Sexual Wellness</a>
-            <a href="temp.html">Treatments</a>
+            <a href="covidEssentials.html">COVID Essentials</a>
+            <a href="covidEssentials.html">Diabetes</a>
+            <a href="covidEssentials.html">Eyewear</a>
+            <a href="covidEssentials.html">Ayush</a>
+            <a href="covidEssentials.html">Fitness</a>
+            <a href="covidEssentials.html">Mom & Baby</a>
+            <a href="covidEssentials.html">Devices</a>
+            <a href="covidEssentials.html">Surgicals</a>
+            <a href="covidEssentials.html">Sexual Wellness</a>
+            <a href="covidEssentials.html">Treatments</a>
         </section>`;
 
 let footer = document.querySelector("footer");

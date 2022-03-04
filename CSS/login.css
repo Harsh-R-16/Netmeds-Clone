@@ -1,155 +1,158 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f3f7fb;
+  font-family: "Ubuntu", sans-serif;
 }
 
-body{
-    background: #f6f6f7;
-    font-weight: 300;
-    font-family: Lato;
-    line-height: 1rem;
-    color: #212529;
-    text-align: left;
-}
+/* body {
+  background: #f6f6f7;
+  font-weight: 300;
+  line-height: 1rem;
+  color: #212529;
+  text-align: left;
+} */
 
 /* login */
 .login {
-    margin: 50px;
-    background: #f6f6f7;
-    display: flex;
-    justify-content: center;
-    flex: 0 0 auto;
-    flex-wrap: nowrap;
+  margin: 50px;
+  background: #f6f6f7;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
 }
 
-.login_img > img{
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+.login_img > img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-.content{
-    background-color: white;
-    padding: 40px;
-    cursor: auto;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+.content {
+  background-color: white;
+  padding: 40px;
+  cursor: auto;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-.title{
-    padding: 20px;
+.title {
+  padding: 20px;
 }
 
-.sign_txt{
-    font-size: 14px;
-    padding-top: 25px;
-    margin-bottom: 35px;
-    width: 350px;
+.sign_txt {
+  font-size: 14px;
+  padding-top: 25px;
+  margin-bottom: 35px;
+  width: 350px;
 }
 
 /* number input */
 
-
-.phone_label{
-    font-weight: bold;
-    font-size: 11px;
-    color: #24aeb1;
-} 
-
-#number{
-    border: none;
-    border-bottom: 2px solid rgba(21,27,57,.04) ;
-    margin: 5px ;
-    width: 80%;
-    font-size: 15px;
+.phone_label {
+  font-weight: bold;
+  font-size: 11px;
+  color: #24aeb1;
 }
 
-#number::placeholder{
-    color: rgb(177, 171, 171);
-    font-size: 1em;
-    text-align: left;
+#number {
+  border: none;
+  border-bottom: 2px solid rgba(21, 27, 57, 0.04);
+  margin: 5px;
+  width: 80%;
+  font-size: 15px;
 }
 
-.login_form > button, label{
-    display: flex;
-    padding: 30px px;
+#number::placeholder {
+  color: rgb(177, 171, 171);
+  font-size: 1em;
+  text-align: left;
 }
 
-.otp_btn{
-    font-weight: bold;
-    color: white;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #24aeb1;
+.login_form > button,
+label {
+  display: flex;
+  padding: 30px px;
+}
+
+.otp_btn {
+  font-weight: bold;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #24aeb1;
 }
 
 /* +91 Prefix */
-.prefix{
-    font-weight: bold;
-    font-size: 15px;
+.prefix {
+  font-weight: bold;
+  font-size: 15px;
 }
 
 /* google  */
 
-#auth{
-    margin-top:80px;
-    display: flex;
-    justify-content: space-around;
+#auth {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.google_logo{
-    cursor: pointer;
-    border-radius: 3px;
-    display: flex;
-    padding: 5px;
-    justify-content: space-around;
-    border: 1px solid rgb(192, 189, 189);
-    width: 120px;
-    font-size: 15px;
+.google_logo {
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+  border: 1px solid rgb(192, 189, 189);
+  width: 120px;
+  font-size: 15px;
 }
 
-.google_logo > img{
-    width: 24px;
+.google_logo > img {
+  width: 24px;
 }
 
 /* facebook */
 
 .fb_logo {
-    cursor: pointer;
-    display: flex;
-    border-radius: 3px;
-    padding: 5px;
-    justify-content: space-around;
-    border: 1px solid rgb(192, 192, 192);
-    width: 120px;
-    font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  border-radius: 3px;
+  padding: 5px;
+  justify-content: space-around;
+  border: 1px solid rgb(192, 192, 192);
+  width: 120px;
+  font-size: 15px;
 }
 
-.fb_logo > img{
-    width: 24px;
+.fb_logo > img {
+  width: 24px;
 }
-
 
 /* copy right */
-.copy_right{
-    display: flex;
-    justify-content: center;
-    font-size: 11px;
-    margin-bottom: 10px;
+.copy_right {
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  margin-bottom: 10px;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
 }
 /* Responsive  */
 
 @media (max-width: 600px) {
-    .login{
-        flex-direction: column;
-    }
+  .login {
+    flex-direction: column;
+  }
 }
