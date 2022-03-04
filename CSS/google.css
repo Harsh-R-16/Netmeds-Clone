@@ -56,3 +56,10 @@ body {
   margin: 20px 0;
   border: none;
 }
+.copy_right {
+  text-align: center;
+  margin: 30px;
+  color: #1cadaf;
+  font-size: 14px;
+  font-weight: bold;
+}

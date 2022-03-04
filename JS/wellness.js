@@ -653,7 +653,7 @@ for (let i = 0; i < data.length; i++) {
                       data[i].arr[j][4]
                     }</span></p>
                     <button id=${data[i].arr[j][5]}>${
-      cart.includes(String(data[i].arr[j][5])) ? "ADDED" : "ADD"
+      cart.includes(data[i].arr[j][5]) ? "ADDED" : "ADD"
     } TO CART</button>
                     <p class="discount-price">${d}% OFF</p>
                 </div>`;
@@ -684,8 +684,8 @@ spans.forEach((span) => {
 article.addEventListener("click", function (e) {
   if (e.target.tagName == "BUTTON") {
     console.log(e.target.id);
-    if (!cart.includes(e.target.id)) {
-      cart.push(e.target.id);
+    if (!cart.includes(+e.target.id)) {
+      cart.push(+e.target.id);
       e.target.innerHTML = "ADDED TO CART";
     }
     localStorage.setItem("cart", JSON.stringify(cart));

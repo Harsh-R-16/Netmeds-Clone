@@ -168,7 +168,7 @@ function getProducts(index) {
                     }</span></p>
                     <p class="mrp">MRP <span>Rs. ${data[i][4]}</span></p>
                     <button id=${data[i][5]}>${
-      cart.includes(String(data[i][5])) ? "ADDED" : "ADD"
+      cart.includes(data[i][5]) ? "ADDED" : "ADD"
     } TO CART</button>
                     <p class="discount-price">${d}% OFF</p>
                 </div>`;
@@ -214,8 +214,8 @@ sortBtns.addEventListener("click", function (e) {
 allProducts.addEventListener("click", function (e) {
   if (e.target.tagName == "BUTTON") {
     console.log(e.target.id);
-    if (!cart.includes(e.target.id)) {
-      cart.push(e.target.id);
+    if (!cart.includes(+e.target.id)) {
+      cart.push(+e.target.id);
       e.target.innerHTML = "ADDED TO CART";
     }
     localStorage.setItem("cart", JSON.stringify(cart));
