@@ -181,8 +181,8 @@ let p = document.querySelector("#showNumber");
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     let num = btns[i].innerHTML - 1;
-    p.innerHTML = `Showing <span>${num * 20 + 1}</span> to <span>${
-      num * 20 + 20
+    p.innerHTML = `Showing <span>${num * 16 + 1}</span> to <span>${
+      num * 16 + 16
     }</span> Products`;
     getProducts(num);
   });
@@ -207,7 +207,7 @@ sortBtns.addEventListener("click", function (e) {
     });
   }
   getProducts(0);
-  p.innerHTML = `Showing <span>1</span> to <span>20</span> Products`;
+  p.innerHTML = `Showing <span>1</span> to <span>16</span> Products`;
   console.log(data);
 });
 

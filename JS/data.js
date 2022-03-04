@@ -617,3 +617,4 @@ let data = [
 ];
 
 export { data };
+console.log(data);
