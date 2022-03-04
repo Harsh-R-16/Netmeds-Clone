@@ -52,16 +52,16 @@ navbar.innerHTML = `<section id="top">
 
         </section>
         <section id="bottom">
-            <a href="#">COVID Essentials</a>
-            <a href="#">Diabetes</a>
-            <a href="#">Eyewear</a>
-            <a href="#">Ayush</a>
-            <a href="#">Fitness</a>
-            <a href="#">Mom & Baby</a>
-            <a href="#">Devices</a>
-            <a href="#">Surgicals</a>
-            <a href="#">Sexual Wellness</a>
-            <a href="#">Treatments</a>
+            <a href="temp.html">COVID Essentials</a>
+            <a href="temp.html">Diabetes</a>
+            <a href="temp.html">Eyewear</a>
+            <a href="temp.html">Ayush</a>
+            <a href="temp.html">Fitness</a>
+            <a href="temp.html">Mom & Baby</a>
+            <a href="temp.html">Devices</a>
+            <a href="temp.html">Surgicals</a>
+            <a href="temp.html">Sexual Wellness</a>
+            <a href="temp.html">Treatments</a>
         </section>`;
 
 let footer = document.querySelector("footer");
@@ -147,4 +147,11 @@ dropP.forEach((i) => {
   i.addEventListener("mouseleave", function (e) {
     i.lastElementChild.classList.add("display");
   });
+});
+
+let bottom = document.querySelector("#bottom");
+
+bottom.addEventListener("click", function (e) {
+  console.log(e.target);
+  if (e.target.tagName == "A") localStorage.setItem("url", e.target.innerHTML);
 });

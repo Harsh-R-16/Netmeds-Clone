@@ -1,3 +1,10 @@
+let h2 = document.querySelector("#container h2");
+// h2.innerHTML = "k";
+if (localStorage.getItem("url")) {
+  h2.innerHTML = localStorage.getItem("url");
+  document.title = localStorage.getItem("url");
+}
+data.sort(() => Math.random() - 0.5);
 let summary = document.querySelector("#summary");
 let checkboxes = document.querySelector("#checkboxes");
 let summaryCategory = {

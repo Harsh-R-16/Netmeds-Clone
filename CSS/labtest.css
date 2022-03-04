@@ -232,3 +232,6 @@ main {
   padding: 7px 15px;
   font-size: 20px;
 }
+button {
+  cursor: pointer;
+}
