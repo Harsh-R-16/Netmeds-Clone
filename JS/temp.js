@@ -137,3 +137,80 @@ function getCheck(arr) {
   }
   return res;
 }
+
+import { data } from "./data.js";
+let allProducts = document.querySelector("#allProducts");
+let cart;
+localStorage.getItem("cart")
+  ? (cart = JSON.parse(localStorage.getItem("cart")))
+  : (cart = []);
+
+function getProducts(index) {
+  let x = index * 16;
+  allProducts.innerHTML = "";
+  for (let i = x; i < x + 16; i++) {
+    let d = Math.round((1 - data[i][3] / data[i][4]) * 100);
+
+    allProducts.innerHTML += ` <div>
+                    <img src=${data[i][0]}
+                        alt="">
+                    <h4>${data[i][1]}</h4>
+                    <p class="mkt">Mkt: ${data[i][2]}</p>
+                    <p class="bestPrice">Best Price: <span>Rs. ${
+                      data[i][3]
+                    }</span></p>
+                    <p class="mrp">MRP <span>Rs. ${data[i][4]}</span></p>
+                    <button id=${data[i][5]}>${
+      cart.includes(String(data[i][5])) ? "ADDED" : "ADD"
+    } TO CART</button>
+                    <p class="discount-price">${d}% OFF</p>
+                </div>`;
+  }
+}
+getProducts(0);
+
+let btns = document.querySelectorAll("#btns button");
+let p = document.querySelector("#showNumber");
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    let num = btns[i].innerHTML - 1;
+    p.innerHTML = `Showing <span>${num * 20 + 1}</span> to <span>${
+      num * 20 + 20
+    }</span> Products`;
+    getProducts(num);
+  });
+}
+
+let sortBtns = document.querySelector("#sortByCategory");
+sortBtns.addEventListener("click", function (e) {
+  if (e.target.innerHTML == "Popularity") {
+    data.sort(() => Math.random() - 0.5);
+  }
+  if (e.target.innerHTML == "High to Low") {
+    data.sort((a, b) => b[3] - a[3]);
+  }
+  if (e.target.innerHTML == "Low to High") {
+    data.sort((a, b) => a[3] - b[3]);
+  }
+  if (e.target.innerHTML == "Discount") {
+    data.sort((a, b) => {
+      let d3 = Math.round((1 - a[3] / b[3]) * 100);
+      let d4 = Math.round((1 - a[4] / b[4]) * 100);
+      return d4 - d3;
+    });
+  }
+  getProducts(0);
+  p.innerHTML = `Showing <span>1</span> to <span>20</span> Products`;
+  console.log(data);
+});
+
+allProducts.addEventListener("click", function (e) {
+  if (e.target.tagName == "BUTTON") {
+    console.log(e.target.id);
+    if (!cart.includes(e.target.id)) {
+      cart.push(e.target.id);
+      e.target.innerHTML = "ADDED TO CART";
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+});

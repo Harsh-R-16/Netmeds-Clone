@@ -94,6 +94,9 @@ h2 span {
   margin: 7px 0px 10px;
   font-size: 14px;
 }
+.mrp span {
+  text-decoration: line-through;
+}
 .sectionType2 button {
   width: 100%;
   font-size: 17px;

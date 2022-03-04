@@ -6,7 +6,7 @@
   background-color: #f3f3f3;
 }
 #products section {
-  height: 1500px;
+  height: fit-content;
 }
 #products aside {
   height: 1500px;
@@ -108,10 +108,16 @@ input[type="checkbox"] {
 }
 #sorting {
   padding: 20px;
+  margin-bottom: 18px;
   background-color: #fff;
   border-radius: 7px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+#sorting div {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 #sorting button {
@@ -127,4 +133,82 @@ input[type="checkbox"] {
 #middle {
   margin-top: 68px;
   padding-bottom: 15px;
+}
+/* --------------------------------- */
+#allproducts {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+#allproducts div {
+  position: relative;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  padding: 10px 12px 17px;
+  border-radius: 7px;
+  margin: 10px 0;
+  background-color: #fff;
+}
+#allproducts img {
+  width: 70%;
+  margin: 5px 15% 10px;
+}
+#allproducts h4 {
+  font-size: 15px;
+  line-height: 20px;
+}
+#allproducts .mkt {
+  color: rgb(88, 88, 88);
+  margin: 7px 0px;
+}
+#allproducts .bestPrice {
+  font-weight: bold;
+  font-size: 15px;
+}
+.bestPrice span {
+  color: #ef4281;
+}
+#allproducts .mrp {
+  margin: 7px 0px 10px;
+  font-size: 14px;
+}
+.mrp span {
+  text-decoration: line-through;
+}
+#allproducts button {
+  width: 100%;
+  font-size: 17px;
+  padding: 7px;
+  border-radius: inherit;
+  color: white;
+  background-color: rgb(50, 174, 177);
+  border: none;
+}
+/* -------------------------------------- */
+.discount-price {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 11px;
+  background-color: #84be52;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+#btns {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  text-align: center;
+}
+#btns button {
+  padding: 5px;
+  margin: 2px 8px;
+  font-weight: bold;
+  border: 2px solid rgb(50, 174, 177);
+  color: rgb(50, 174, 177);
+  border-radius: 4px;
 }

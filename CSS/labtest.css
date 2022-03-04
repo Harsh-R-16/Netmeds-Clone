@@ -1,3 +1,6 @@
+main {
+  background-color: #f6f6f7;
+}
 #grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -74,4 +77,158 @@
   color: white;
   background-color: rgb(50, 174, 177);
   font-size: 16px;
+}
+
+#tests,
+#packages,
+#customer,
+#highlight,
+#labP,
+#whatsapp {
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  margin: 25px 40px;
+  background-color: white;
+  padding: 20px;
+}
+#tests h2,
+#packages h2,
+#customer h2,
+#highlight h2,
+#labP h2 {
+  font-size: 26px;
+}
+#tests > p,
+#packages > p,
+#customer > p,
+#labP p {
+  color: grey;
+  margin: 25px 0px;
+}
+#tests section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+#tests div {
+  display: flex;
+  align-items: center;
+}
+#tests i {
+  font-size: 30px;
+  margin-right: 10px;
+  color: rgb(50, 174, 177);
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #f6f6f7;
+}
+#packages section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+#packages img {
+  width: 100%;
+}
+#packages div {
+  background-color: #f6f6f6;
+  padding: 15px;
+}
+#packages h3 + p {
+  font-size: 14px;
+  margin: 10px 0px;
+  line-height: 17px;
+}
+#packages .price {
+  /* text-decoration: line-through; */
+  font-size: 12px;
+}
+.price span {
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(230, 53, 150);
+}
+#packages button {
+  background-color: rgb(50, 174, 177);
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border: 1px solid rgb(44, 44, 44);
+  margin: 10px 0px;
+}
+#packages img {
+  height: 150px;
+}
+
+#customer section {
+  display: flex;
+  justify-content: space-between;
+}
+#customer article {
+  width: 30%;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid rgb(50, 174, 177);
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+}
+#customer hr {
+  width: 25%;
+}
+#customer p {
+  margin: 6px 0px 15px;
+  font-size: 14px;
+  line-height: 20px;
+}
+#customer i {
+  font-size: 30px;
+  color: rgb(50, 174, 177);
+}
+#customer article div:nth-of-type(2) p::first-letter {
+  margin-left: 30px;
+}
+
+#highlight article {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+#highlight div {
+  background-color: white;
+  padding: 20px 10px;
+  border: 1px solid rgb(50, 174, 177);
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  margin-top: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#highlight i {
+  font-size: 30px;
+  margin-right: 10px;
+  color: rgb(50, 174, 177);
+}
+#labP div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#labP hr {
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+#whatsapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#whatsapp h2 {
+  margin: 5px 20px;
+  color: rgb(50, 174, 177);
+}
+#whatsapp button {
+  background-color: rgb(50, 174, 177);
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  font-size: 20px;
 }
