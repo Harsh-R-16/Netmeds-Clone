@@ -11,7 +11,9 @@ navbar.innerHTML = `<section id="top">
             <div>
                 <p>Deliver to <span id="zipCode">110002</span><i class='fa fa-chevron-down'></i></p>
                 <p id="line">|</p>
-                <input type="text" placeholder="Search for medicine & wellness products...">
+                <span><input type="text" placeholder="Search for medicine & wellness products...">
+                <p id="dropDownItem" class="displayNone"></p>
+                </span>
             </div>
             <p><i class="fa fa-upload"></i> Upload</p>
             <p><a href=${link}><i class='fa fa-shopping-cart'></i> Cart</a></p>
@@ -161,4 +163,31 @@ let bottom = document.querySelector("#bottom");
 bottom.addEventListener("click", function (e) {
   console.log(e.target);
   if (e.target.tagName == "A") localStorage.setItem("url", e.target.innerHTML);
+});
+
+let inp = navbar.querySelector("input");
+console.log(inp);
+let dd = navbar.querySelector("#dropDownItem");
+inp.addEventListener("input", function () {
+  dd.innerHTML = getResults(inp.value);
+  if (inp.value && dd.innerHTML) dd.classList.remove("displayNone");
+  else dd.classList.add("displayNone");
+});
+import { data } from "./data.js";
+function getResults(inp) {
+  let res = "";
+  for (let i = 0; i < data.length; i++) {
+    if (data[i][1].toLowerCase().includes(inp))
+      res += `<li id=${data[i][5]}>${data[i][1]}</li>`;
+  }
+  return res;
+}
+document.body.addEventListener("click", function (e) {
+  if (e.target.parentElement.id !== "dropDownItem") {
+    dd.classList.add("displayNone");
+  } else {
+    console.log(e.target.id);
+    localStorage.setItem("singleId", +e.target.id + 100);
+    window.location.assign("/singleProduct.html");
+  }
 });

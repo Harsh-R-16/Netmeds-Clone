@@ -35,11 +35,34 @@ nav {
   font-weight: bold;
   font-size: 14px;
 }
+#top span {
+  flex-grow: 1;
+  position: relative;
+}
+#top span p {
+  position: absolute;
+  padding: 6px 10px;
+  top: 37px;
+}
 #top input {
   background-color: inherit;
   border: none;
-  flex-grow: 1;
   padding: 6px 10px;
+  width: 95%;
+}
+#dropDownItem {
+  background-color: #fff;
+  list-style: none;
+  width: 98%;
+  max-height: 400px;
+  overflow-y: scroll;
+  box-shadow: 3px 3px 6px 1px #7a7a7a;
+}
+#dropDownItem li {
+  font-weight: normal;
+  font-size: 13px;
+  margin: 10px 0;
+  cursor: pointer;
 }
 #top input:focus {
   outline: none;
@@ -219,4 +242,8 @@ button i {
 }
 #middle a:hover {
   color: rgb(73, 73, 73);
+}
+
+.displayNone {
+  display: none;
 }
