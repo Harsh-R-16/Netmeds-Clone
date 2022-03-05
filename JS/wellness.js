@@ -641,7 +641,7 @@ for (let i = 0; i < data.length; i++) {
   let res = "";
   for (let j = 0; j < data[i].arr.length; j++) {
     let d = Math.round((1 - data[i].arr[j][3] / data[i].arr[j][4]) * 100);
-    res += ` <div>
+    res += ` <div id=${data[i].arr[j][5] + 100}>
                     <img src=${data[i].arr[j][0]}
                         alt="">
                     <h4>${data[i].arr[j][1]}</h4>
@@ -689,5 +689,15 @@ article.addEventListener("click", function (e) {
       e.target.innerHTML = "ADDED TO CART";
     }
     localStorage.setItem("cart", JSON.stringify(cart));
+  }
+});
+article.addEventListener("click", function (e) {
+  if (
+    e.target.parentElement.tagName == "DIV" &&
+    e.target.tagName !== "BUTTON"
+  ) {
+    console.log(e.target.parentElement);
+    localStorage.setItem("singleId", +e.target.parentElement.id);
+    window.location.assign("/singleProduct.html");
   }
 });

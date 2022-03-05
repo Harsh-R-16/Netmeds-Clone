@@ -158,7 +158,7 @@ function getProducts(index) {
   for (let i = x; i < x + 16; i++) {
     let d = Math.round((1 - data[i][3] / data[i][4]) * 100);
 
-    allProducts.innerHTML += ` <div>
+    allProducts.innerHTML += ` <div id=${data[i][5] + 100}>
                     <img src=${data[i][0]}
                         alt="">
                     <h4>${data[i][1]}</h4>
@@ -219,5 +219,15 @@ allProducts.addEventListener("click", function (e) {
       e.target.innerHTML = "ADDED TO CART";
     }
     localStorage.setItem("cart", JSON.stringify(cart));
+  }
+});
+allProducts.addEventListener("click", function (e) {
+  if (
+    e.target.parentElement.tagName == "DIV" &&
+    e.target.tagName !== "BUTTON"
+  ) {
+    console.log(e.target.parentElement);
+    localStorage.setItem("singleId", +e.target.parentElement.id);
+    window.location.assign("/singleProduct.html");
   }
 });
