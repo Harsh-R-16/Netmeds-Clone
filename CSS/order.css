@@ -1,19 +1,128 @@
 body {
   background-color: #f3f3f3;
+  letter-spacing: 1.2px;
 }
 #grid-container {
-  border: 1px solid red;
   margin: 10px 10% 20px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 4fr 2fr;
   gap: 30px;
 }
 #cart-h2 {
   margin: 10px 10% 20px;
 }
 #grid-container article {
-  border: 2px solid red;
+  padding: 10px;
+  border-radius: 10px;
 }
 #grid-container img {
   width: 100%;
+  border-radius: 4px;
+}
+
+#parent-div div img {
+  height: 100px;
+  width: 100px;
+}
+#grid-container article div > div {
+  background-color: #fff;
+  margin: 18px 0;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  border-radius: 4px;
+  padding: 15px;
+  height: fit-content;
+}
+#grid-container #parent-div img {
+  float: left;
+  height: 80px;
+  aspect-ratio: 1;
+  margin-bottom: 100px;
+}
+#parent-div h3 + p {
+  font-size: 12px;
+  margin: 6px 0;
+  color: green;
+}
+#parent-div h3 + p + p {
+  margin: 7px 0;
+  font-size: 14px;
+}
+.price-span {
+  font-size: 13px;
+}
+.price-span span {
+  color: #ef4281;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.price-span + p {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #646464;
+}
+
+#parent-div select {
+  width: 50px;
+  padding: 2px 3px;
+}
+#parent-div button {
+  display: block;
+  background-color: #1cadaf;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 20px 0 10px;
+  border: none;
+  letter-spacing: 2px;
+  border-radius: 4px;
+}
+#promo-code,
+#payment,
+#terms {
+  background-color: #fff;
+  margin: 18px 0;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  border-radius: 4px;
+  padding: 15px;
+  height: fit-content;
+}
+#terms {
+  font-size: 13px;
+  line-height: 18px;
+  color: rgb(138, 135, 135);
+}
+#terms span {
+  color: blue;
+}
+#promo-code {
+  text-align: center;
+}
+#promo-code p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: red;
+}
+#promo-code label {
+  margin: 10px 0;
+}
+#promo-code select {
+  width: 170px;
+  padding: 2px;
+}
+#payment p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 7px 5px;
+}
+#payment button {
+  width: 98%;
+  margin: 15px 1%;
+  padding: 10px;
+  border: none;
+  background-color: #1cadaf;
+  color: white;
+  font-weight: bold;
+  border-radius: inherit;
 }
