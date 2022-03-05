@@ -231,3 +231,20 @@ allProducts.addEventListener("click", function (e) {
     window.location.assign("/singleProduct.html");
   }
 });
+
+checkboxes.addEventListener("click", function (e) {
+  console.log(e.target);
+  if (e.target.parentElement.tagName == "LI") {
+    data.sort(() => Math.random() - 0.5);
+    getProducts(0);
+    p.innerHTML = `Showing <span>1</span> to <span>16</span> Products`;
+  }
+});
+summary.addEventListener("click", function (e) {
+  console.log(e.target);
+  if (e.target.tagName == "LI") {
+    data.sort(() => Math.random() - 0.5);
+    getProducts(0);
+    p.innerHTML = `Showing <span>1</span> to <span>16</span> Products`;
+  }
+});

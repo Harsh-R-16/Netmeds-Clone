@@ -38,7 +38,7 @@ product.innerHTML = ` <article>
                 <p id="aprice">MRP <span>₹ ${data[index][4]}</span> <span>GET ${d}% OFF</span></p>
                 <p>(Inclusive of all taxes)</p>
                 <li>*This product cannot be returned for a refund or exchange.</li>
-                <li>* Mkt: Inventz Lifesciences Pvt Ltd</li>
+                <li>* Mkt: ${data[index][2]}</li>
                 <li>* Country of Origin: India</li>
                 <li>* Delivery charges if applicable will be applied at checkout</li>
                 <button>ADD TO CART</button>
