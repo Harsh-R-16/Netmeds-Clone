@@ -97,5 +97,5 @@ calcPrice(dprice, aprice);
 
 let btn = paymentDiv.querySelector("button");
 btn.addEventListener("click", function () {
-  window.location.assign("/addressPayment.html");
+  window.location.assign("addressPayment.html");
 });

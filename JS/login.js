@@ -8,6 +8,6 @@ btn.addEventListener("click", () => {
   if (inp.value) {
     localStorage.setItem("otp", a);
     alert("Your OTP is " + a + ".");
-    window.location.assign("/google.html");
+    window.location.assign("google.html");
   }
 });

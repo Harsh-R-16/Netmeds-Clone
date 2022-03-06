@@ -698,6 +698,6 @@ article.addEventListener("click", function (e) {
   ) {
     console.log(e.target.parentElement);
     localStorage.setItem("singleId", +e.target.parentElement.id);
-    window.location.assign("/singleProduct.html");
+    window.location.assign("singleProduct.html");
   }
 });

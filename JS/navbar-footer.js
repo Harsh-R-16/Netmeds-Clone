@@ -188,6 +188,6 @@ document.body.addEventListener("click", function (e) {
   } else {
     console.log(e.target.id);
     localStorage.setItem("singleId", +e.target.id + 100);
-    window.location.assign("/singleProduct.html");
+    window.location.assign("singleProduct.html");
   }
 });
