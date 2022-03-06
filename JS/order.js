@@ -73,8 +73,8 @@ selects.forEach((select, index) => {
     calcPrice(dprice, aprice);
   });
 });
+let paymentDiv = document.querySelector("#payment");
 function calcPrice(dprice, aprice) {
-  let paymentDiv = document.querySelector("#payment");
   paymentDiv.innerHTML = `
                     <p>PAYMENT DETAILS</p>
                     <p><span>MRP Total:</span> <span>Rs.${sum(
@@ -89,6 +89,13 @@ function calcPrice(dprice, aprice) {
                     <p><span>Total Amount (MASAI30 Applied):</span> <span>RS.${Math.floor(
                       sum(dprice) * 0.7
                     )}</span></p>
-                    <button>PROCEED</button>`;
+                    <button>PROCEED TO PAY Rs.${Math.floor(
+                      sum(dprice) * 0.7
+                    )}</button>`;
 }
 calcPrice(dprice, aprice);
+
+let btn = paymentDiv.querySelector("button");
+btn.addEventListener("click", function () {
+  window.location.assign("/addressPayment.html");
+});

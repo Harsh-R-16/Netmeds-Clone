@@ -1,0 +1,74 @@
+body {
+  background-color: #f3f3f3;
+  letter-spacing: 1.2px;
+}
+
+#addressPayment {
+  margin: 10px 10% 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  overflow: hidden;
+  position: relative;
+}
+#addressPayment section {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  border-radius: 5px;
+  transition: 1s ease-in-out;
+}
+#addressPayment form {
+  display: flex;
+  flex-direction: column;
+}
+#addressPayment label {
+  color: #1cadaf;
+  font-weight: bold;
+  margin: 15px 0 10px;
+}
+#addressPayment input {
+  padding: 2px 4px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+#addressPayment input:focus {
+  outline: none;
+}
+#addressPayment button {
+  width: 100%;
+  margin: 25px 0;
+  padding: 10px;
+  border: none;
+  background-color: #1cadaf;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+#addressPayment div {
+  box-shadow: 1px 1px 6px 1px #cfcfcf;
+  position: absolute;
+  padding: 30px 0;
+  width: 550px;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 7px;
+  transition: 1s cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
+}
+#addressPayment p {
+  margin: 15px;
+  text-align: center;
+}
+#addressPayment div button {
+  width: 70%;
+  margin: 15px 15%;
+}
+#addressPayment a {
+  text-decoration: none;
+  color: #fff;
+}
