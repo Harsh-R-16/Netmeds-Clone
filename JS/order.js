@@ -89,13 +89,13 @@ function calcPrice(dprice, aprice) {
                     <p><span>Total Amount (MASAI30 Applied):</span> <span>RS.${Math.floor(
                       sum(dprice) * 0.7
                     )}</span></p>
-                    <button>PROCEED TO PAY Rs.${Math.floor(
+                    <a href="addressPayment.html"><button>PROCEED TO PAY Rs.${Math.floor(
                       sum(dprice) * 0.7
-                    )}</button>`;
+                    )}</button></a>`;
 }
 calcPrice(dprice, aprice);
 
-let btn = paymentDiv.querySelector("button");
-btn.addEventListener("click", function () {
-  window.location.assign("addressPayment.html");
-});
+// let btn = paymentDiv.querySelector("button");
+// btn.addEventListener("click", function () {
+//   window.location.assign("addressPayment.html");
+// });
