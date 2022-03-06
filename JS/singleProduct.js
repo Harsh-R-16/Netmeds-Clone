@@ -8,9 +8,13 @@ for (let i = 0; i < data.length; i++) {
   }
 }
 console.log(index);
-document.querySelector("#link-url").innerHTML = `Home > ${localStorage.getItem(
-  "url"
-)} > ${data[index][1]}`;
+let url;
+localStorage.getItem("url")
+  ? (url = localStorage.getItem("url"))
+  : (url = "Wellness");
+document.querySelector(
+  "#link-url"
+).innerHTML = `Home > ${url} > ${data[index][1]}`;
 let d = Math.round((1 - data[index][3] / data[index][4]) * 100);
 let product = document.querySelector("#productGrid");
 product.innerHTML = ` <article>
