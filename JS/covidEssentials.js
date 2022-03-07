@@ -201,8 +201,8 @@ sortBtns.addEventListener("click", function (e) {
   }
   if (e.target.innerHTML == "Discount") {
     data.sort((a, b) => {
-      let d3 = Math.round((1 - a[3] / b[3]) * 100);
-      let d4 = Math.round((1 - a[4] / b[4]) * 100);
+      let d3 = Math.round((1 - a[3] / a[4]) * 100);
+      let d4 = Math.round((1 - b[3] / b[4]) * 100);
       return d4 - d3;
     });
   }
