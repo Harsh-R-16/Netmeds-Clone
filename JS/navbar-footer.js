@@ -16,7 +16,7 @@ navbar.innerHTML = `<section id="top">
                 </span>
             </div>
             <p><i class="fa fa-upload"></i> Upload</p>
-            <p><a href=${link}><i class='fa fa-shopping-cart'></i> Cart</a></p>
+            <p><a href="cart.html"><i class='fa fa-shopping-cart'></i> Cart</a></p>
             <p><a href="login.html"><i class='fas fa-user-edit'></i> ${n}</a></p>
         </section>
         <section id="middle">
