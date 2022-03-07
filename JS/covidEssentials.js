@@ -175,6 +175,7 @@ function getProducts(index) {
   }
 }
 getProducts(0);
+import { get_added_item_fn } from "./cart_items.js"
 
 let btns = document.querySelectorAll("#btns button");
 let p = document.querySelector("#showNumber");
@@ -214,6 +215,8 @@ sortBtns.addEventListener("click", function (e) {
 allProducts.addEventListener("click", function (e) {
   if (e.target.tagName == "BUTTON") {
     console.log(e.target.id);
+    get_added_item_fn(e.target.parentNode.childNodes);
+    // console.log(e.target.parentNode.childNodes)
     if (!cart.includes(+e.target.id)) {
       cart.push(+e.target.id);
       e.target.innerHTML = "ADDED TO CART";
