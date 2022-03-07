@@ -632,7 +632,7 @@ let data = [
     ],
   },
 ];
-import { get_added_item_fn } from "./cart_items.js"
+// import { get_added_item_fn } from "./cart_items.js"
 let cart;
 localStorage.getItem("cart")
   ? (cart = JSON.parse(localStorage.getItem("cart")))
@@ -685,7 +685,7 @@ spans.forEach((span) => {
 article.addEventListener("click", function (e) {
   if (e.target.tagName == "BUTTON") {
     console.log(e.target.id);
-    get_added_item_fn(e.target.parentNode.childNodes);
+    // get_added_item_fn(e.target.parentNode.childNodes);
     if (!cart.includes(+e.target.id)) {
       cart.push(+e.target.id);
       e.target.innerHTML = "ADDED TO CART";
