@@ -1,5 +1,8 @@
 import { data } from "./data.js";
 let id = localStorage.getItem("singleId") - 100;
+let cart = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
 let index;
 for (let i = 0; i < data.length; i++) {
   if (data[i][5] == id) {
@@ -63,4 +66,16 @@ div.forEach((item) => {
   item.addEventListener("click", function () {
     product.querySelector("#main-img").src = item.src;
   });
+});
+
+let btn = product.querySelector("button");
+// console.log(btn);
+btn.addEventListener("click", function () {
+  if (cart.includes(id)) {
+    btn.innerHTML = "ADDED TO CART";
+  } else {
+    cart.push(id);
+    btn.innerHTML = "ADDED TO CART";
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
 });
