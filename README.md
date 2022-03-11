@@ -1,3 +1,3 @@
 # Netmeds Clone
- Masai Project.
+## Project.
 https://harsh-r-16.github.io/Netmeds-Clone/
