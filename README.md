@@ -3,6 +3,8 @@
 Netmeds is India’s One of most trusted pharmacies website, with over 100 years of
 experience in dispensing quality medicines.
 
+Created Netmeds Website Clone with all Functionalities like Cart, Login and Products Page with Sorting Functionalities and Single Product Page.
+
 # Video Link
 
 > [Video URL](https://drive.google.com/file/d/101_rwoSj_46T84HJT_Kcta-3zScXkywl/view?usp=sharing)
