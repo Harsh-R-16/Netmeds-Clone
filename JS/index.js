@@ -1,8 +1,8 @@
 let sliderImgs = [
-  "https://www.netmeds.com/images/cms/aw_rbslider/slides/1640966085_Web_Home_title_1680X320.jpg",
-  "https://www.netmeds.com/images/cms/aw_rbslider/slides/1643645501_Home_Banner741.jpg",
-  "https://www.netmeds.com/images/cms/aw_rbslider/slides/1643645870_Home_Bannerzdfsf.jpg",
-  "https://www.netmeds.com/images/cms/aw_rbslider/slides/1641829832_Homebvbbbb.jpg",
+  "https://www.netmeds.com/images/cms/aw_rbslider/slides/1650033102_Home_Banner_Kareena.jpg",
+  "https://www.netmeds.com/images/cms/aw_rbslider/slides/1648222616_Home_bannerfdd.jpg",
+  "https://www.netmeds.com/images/cms/aw_rbslider/slides/1648222844_Home_bannerfdsdg.jpg",
+  "https://www.netmeds.com/images/cms/aw_rbslider/slides/1648464223_Bowl_100_Home-Bannerdsgdsg.jpg",
 ];
 // console.log(sliderImgs);
 let sliderImg = document.querySelector("#img-slider img");
