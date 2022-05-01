@@ -73,6 +73,7 @@ h2 span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 #payment > div {
@@ -112,7 +113,7 @@ h2 span {
 #previous div {
   background-color: #f3f7fb;
   box-shadow: 1px 1px 6px 1px #cfcfcf;
-  border-radius: 15px;
+  border-radius: 7px;
 }
 #previous p {
   margin: 7px 0px 15px 15px;
