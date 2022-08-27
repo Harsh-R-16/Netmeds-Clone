@@ -1,4 +1,5 @@
-let navbar = document.querySelector("nav");
+let navbar1 = document.querySelector("#nav1");
+let navbar2 = document.querySelector("#nav2");
 let n;
 let link;
 localStorage.getItem("name") ? (link = "order.html") : (link = "login.html");
@@ -6,7 +7,7 @@ localStorage.getItem("name") ? (link = "order.html") : (link = "login.html");
 localStorage.getItem("name")
   ? (n = localStorage.getItem("name") + " " + localStorage.getItem("lname"))
   : (n = "Sign in / Sign up");
-navbar.innerHTML = `<section id="top">
+navbar1.innerHTML = `<section id="top">
             <a href="index.html"><img src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg" alt=""></a>
             <div>
                 <p>Deliver to <span id="zipCode">110002</span><i class='fa fa-chevron-down'></i></p>
@@ -18,8 +19,8 @@ navbar.innerHTML = `<section id="top">
             <p><i class="fa fa-upload"></i> Upload</p>
             <p><a href=${link}><i class='fa fa-shopping-cart'></i> Cart</a></p>
             <p><a href="login.html"><i class='fas fa-user-edit'></i> ${n}</a></p>
-        </section>
-        <section id="middle">
+        </section>`;
+navbar2.innerHTML = `<section id="middle">
             <p class="drop-p">
                 <span><img
                         src="https://th.bing.com/th/id/OIP.kdCSK04x60LCmnn9gzs-lAHaFj?w=221&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
@@ -165,9 +166,9 @@ bottom.addEventListener("click", function (e) {
   if (e.target.tagName == "A") localStorage.setItem("url", e.target.innerHTML);
 });
 
-let inp = navbar.querySelector("input");
+let inp = navbar1.querySelector("input");
 console.log(inp);
-let dd = navbar.querySelector("#dropDownItem");
+let dd = navbar1.querySelector("#dropDownItem");
 inp.addEventListener("input", function () {
   dd.innerHTML = getResults(inp.value);
   if (inp.value && dd.innerHTML) dd.classList.remove("displayNone");

@@ -7,16 +7,19 @@
 nav {
   background-color: rgb(50, 174, 177);
 }
+
+#nav1 {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 #top {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px 40px;
-  position: fixed;
-  top: 0;
+  padding: 20px 40px 10px;
   background-color: inherit;
-  z-index: 1;
-  width: 100%;
 }
 #top div {
   display: flex;
@@ -90,10 +93,9 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 3px 10% 12px;
-  margin-top: 87.2px;
+  padding: 10px 10% 12px;
 }
-/* 87.2 */
+
 #middle p {
   display: flex;
   justify-content: center;

@@ -146,7 +146,7 @@ function getCheck(arr) {
 }
 
 import { data } from "./data.js";
-let allProducts = document.querySelector("#allProducts");
+let allProducts = document.querySelector("#allproducts");
 let cart;
 localStorage.getItem("cart")
   ? (cart = JSON.parse(localStorage.getItem("cart")))
