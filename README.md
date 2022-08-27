@@ -13,7 +13,7 @@ Created Netmeds Website Clone with all Functionalities like Cart, Login and Prod
 
 > [Netmeds.com](https://netmeds-clone-harsh.netlify.app/)
 
-# Technology Used
+# Created With
 
 1. HTML
 2. CSS
