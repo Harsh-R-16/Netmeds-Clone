@@ -11,7 +11,7 @@ Created Netmeds Website Clone with all Functionalities like Cart, Login and Prod
 
 # Deployed link of the Website
 
-> [https://netmeds-clone-harsh.netlify.app/](https://netmeds-clone-harsh.netlify.app/)
+> [https://netmeds-website-harsh.netlify.app/](https://netmeds-website-harsh.netlify.app/)
 
 # Created With
 
